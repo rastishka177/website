@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://api-maps.yandex.ru; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api-maps.yandex.ru">
+    <title>МеталлПрокат - Продажа металлопроката</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>МеталлПрокат</h1>
+        <p>Продажа металлопроката оптом и в розницу</p>
+        <button class="cart-btn" id="cartButton">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#products">Каталог</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="products">
+            <h2>Наш ассортимент</h2>
+            <div class="products">
+                <!-- Товар 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x200?text=Арматура+A500" alt="Арматура A500">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Арматура A500</h3>
+                        <p>Диаметр: 10-32 мм</p>
+                        <p class="product-stock">В наличии: 125 тонн</p>
+                        <p class="product-price">45 000 руб./тонна</p>
+                        <button class="btn btn-cart add-to-cart"
+                                data-id="1"
+                                data-name="Арматура A500"
+                                data-price="45000"
+                                data-image="https://via.placeholder.com/300x200?text=Арматура+A500">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Товар 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x200?text=Лист+стальной" alt="Лист стальной">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Лист стальной</h3>
+                        <p>Толщина: 2-20 мм</p>
+                        <p class="product-stock">В наличии: 80 тонн</p>
+                        <p class="product-price">52 000 руб./тонна</p>
+                        <button class="btn btn-cart add-to-cart"
+                                data-id="2"
+                                data-name="Лист стальной"
+                                data-price="52000"
+                                data-image="https://via.placeholder.com/300x200?text=Лист+стальной">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Товар 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x200?text=Труба+круглая" alt="Труба круглая">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Труба круглая</h3>
+                        <p>Диаметр: 20-200 мм</p>
+                        <p class="product-stock">В наличии: 60 тонн</p>
+                        <p class="product-price">68 000 руб./тонна</p>
+                        <button class="btn btn-cart add-to-cart"
+                                data-id="3"
+                                data-name="Труба круглая"
+                                data-price="68000"
+                                data-image="https://via.placeholder.com/300x200?text=Труба+круглая">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Товар 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x200?text=Уголок+металлический" alt="Уголок металлический">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Уголок металлический</h3>
+                        <p>Размер: 25x25 - 100x100 мм</p>
+                        <p class="product-stock">В наличии: 45 тонн</p>
+                        <p class="product-price">48 000 руб./тонна</p>
+                        <button class="btn btn-cart add-to-cart"
+                                data-id="4"
+                                data-name="Уголок металлический"
+                                data-price="48000"
+                                data-image="https://via.placeholder.com/300x200?text=Уголок+металлический">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Товар 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x200?text=Швеллер" alt="Швеллер">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Швеллер</h3>
+                        <p>Номер: 5-20</p>
+                        <p class="product-stock">В наличии: 30 тонн</p>
+                        <p class="product-price">55 000 руб./тонна</p>
+                        <button class="btn btn-cart add-to-cart"
+                                data-id="5"
+                                data-name="Швеллер"
+                                data-price="55000"
+                                data-image="https://via.placeholder.com/300x200?text=Швеллер">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Товар 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x200?text=Проволока" alt="Проволока">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Проволока вязальная</h3>
+                        <p>Диаметр: 1,2-4 мм</p>
+                        <p class="product-stock">В наличии: 15 тонн</p>
+                        <p class="product-price">38 000 руб./тонна</p>
+                        <button class="btn btn-cart add-to-cart"
+                                data-id="6"
+                                data-name="Проволока вязальная"
+                                data-price="38000"
+                                data-image="https://via.placeholder.com/300x200?text=Проволока">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>О нашей компании</h2>
+            <p>Мы занимаемся продажей металлопроката уже более 15 лет. Наша компания предлагает широкий ассортимент металлических изделий по конкурентным ценам. Мы работаем как с крупными оптовыми покупателями, так и с частными клиентами.</p>
+            <p>Все наши товары соответствуют ГОСТам и имеют необходимые сертификаты качества.</p>
+        </section>
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <p><strong>Адрес:</strong> Промышленная улица, с2, село Дубровичи, Дубровическое сельское поселение, Рязанский район </p>
+                <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                <p><strong>Email:</strong> info@metalloprokat.ru</p>
+                <p><strong>Режим работы:</strong> Пн-Пт: 9:00-18:00, Сб: 10:00-15:00, Вс: выходной</p>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </section>
+    </div>
+
+    <!-- Модальное окно корзины -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ваша корзина</h2>
+            <div id="cartContent">
+                <!-- Сюда будет вставлено содержимое корзины -->
+                <div class="cart-empty">
+                    <p>Ваша корзина пуста</p>
+                    <button class="btn continue-shopping">Продолжить покупки</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно заказа -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Оформление заказа</h2>
+            <div class="order-info" id="selectedProductInfo">
+                <!-- Сюда будет вставлена информация о заказе -->
+            </div>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="delivery">Способ получения:</label>
+                    <select id="delivery" name="delivery">
+                        <option value="pickup">Самовывоз</option>
+                        <option value="delivery">Доставка</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Адрес доставки (если требуется):</label>
+                    <input type="text" id="address" name="address">
+                </div>
+                <div class="form-group">
+                    <label for="message">Дополнительная информация:</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 МеталлПрокат. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Корзина
+        let cart = [];
+        const cartButton = document.getElementById("cartButton");
+        const cartCount = document.getElementById("cartCount");
+        const cartModal = document.getElementById("cartModal");
+        const cartContent = document.getElementById("cartContent");
+        const orderModal = document.getElementById("orderModal");
+        const orderForm = document.getElementById("orderForm");
+        const closeButtons = document.querySelectorAll(".close");
+
+        // Загрузка корзины из localStorage
+        function loadCart() {
+            const savedCart = localStorage.getItem('cart');
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+                updateCartCount();
+            }
+        }
+
+        // Сохранение корзины в localStorage
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Обновление счетчика корзины
+        function updateCartCount() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+        }
+
+        // Обновление содержимого корзины в модальном окне
+        function updateCartContent() {
+            if (cart.length === 0) {
+                cartContent.innerHTML = `
+                    <div class="cart-empty">
+                        <p>Ваша корзина пуста</p>
+                        <button class="btn continue-shopping">Продолжить покупки</button>
+                    </div>
+                `;
+            } else {
+                let tableHTML = `
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Товар</th>
+                                <th>Цена</th>
+                                <th>Количество</th>
+                                <th>Сумма</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+                let total = 0;
+
+                cart.forEach((item, index) => {
+                    const itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+
+                    tableHTML += `
+                        <tr>
+                            <td>
+                                <img src="${item.image}" alt="${item.name}" style="width:50px; height:auto; margin-right:10px;">
+                                ${item.name}
+                            </td>
+                            <td>${item.price.toLocaleString()} руб.</td>
+                            <td>
+                                <input type="number" class="quantity-input"
+                                       value="${item.quantity}" min="1"
+                                       data-index="${index}">
+                            </td>
+                            <td>${itemTotal.toLocaleString()} руб.</td>
+                            <td class="remove-btn" data-index="${index}">×</td>
+                        </tr>
+                    `;
+                });
+
+                tableHTML += `
+                        </tbody>
+                    </table>
+                    <div class="cart-total">
+                        Итого: ${total.toLocaleString()} руб.
+                    </div>
+                    <div class="cart-actions">
+                        <button class="btn continue-shopping">Продолжить покупки</button>
+                        <button class="btn checkout-btn" id="checkoutButton">Оформить заказ</button>
+                    </div>
+                `;
+
+                cartContent.innerHTML = tableHTML;
+
+                // Добавляем обработчики для новых элементов
+                document.querySelectorAll('.quantity-input').forEach(input => {
+                    input.addEventListener('change', function() {
+                        const index = this.getAttribute('data-index');
+                        const newQuantity = parseInt(this.value);
+                        if (newQuantity > 0) {
+                            cart[index].quantity = newQuantity;
+                            saveCart();
+                            updateCartContent();
+                            updateCartCount();
+                        }
+                    });
+                });
+
+                document.querySelectorAll('.remove-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const index = this.getAttribute('data-index');
+                        cart.splice(index, 1);
+                        saveCart();
+                        updateCartContent();
+                        updateCartCount();
+                    });
+                });
+
+                document.getElementById('checkoutButton').addEventListener('click', function() {
+                    cartModal.style.display = 'none';
+                    showOrderModal();
+                });
+            }
+
+            // Обработчик для кнопки "Продолжить покупки"
+            document.querySelectorAll('.continue-shopping').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    cartModal.style.display = 'none';
+                });
+            });
+        }
+
+        // Показать модальное окно заказа
+        function showOrderModal() {
+            let orderInfoHTML = '<h3>Состав заказа:</h3><ul>';
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                orderInfoHTML += `<li>${item.name} - ${item.quantity} тонн × ${item.price.toLocaleString()} руб. = ${itemTotal.toLocaleString()} руб.</li>`;
+            });
+
+            orderInfoHTML += `</ul><p><strong>Общая сумма: ${total.toLocaleString()} руб.</strong></p>`;
+            document.getElementById('selectedProductInfo').innerHTML = orderInfoHTML;
+            orderModal.style.display = 'block';
+        }
+
+        // Добавление товара в корзину
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                const name = this.getAttribute('data-name');
+                const price = parseInt(this.getAttribute('data-price'));
+                const image = this.getAttribute('data-image');
+
+                // Проверяем, есть ли уже такой товар в корзине
+                const existingItem = cart.find(item => item.id === id);
+
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        id,
+                        name,
+                        price,
+                        image,
+                        quantity: 1
+                    });
+                }
+
+                saveCart();
+                updateCartCount();
+
+                // Анимация добавления в корзину
+                const cartBtnRect = cartButton.getBoundingClientRect();
+                const buttonRect = this.getBoundingClientRect();
+
+                const flyingItem = document.createElement('div');
+                flyingItem.style.position = 'fixed';
+                flyingItem.style.left = `${buttonRect.left}px`;
+                flyingItem.style.top = `${buttonRect.top}px`;
+                flyingItem.style.width = '20px';
+                flyingItem.style.height = '20px';
+                flyingItem.style.backgroundColor = '#27ae60';
+                flyingItem.style.borderRadius = '50%';
+                flyingItem.style.zIndex = '1000';
+                flyingItem.style.transition = 'all 0.5s ease-out';
+                document.body.appendChild(flyingItem);
+
+                setTimeout(() => {
+                    flyingItem.style.left = `${cartBtnRect.left}px`;
+                    flyingItem.style.top = `${cartBtnRect.top}px`;
+                    flyingItem.style.transform = 'scale(0.2)';
+                    flyingItem.style.opacity = '0.5';
+                }, 10);
+
+                setTimeout(() => {
+                    document.body.removeChild(flyingItem);
+                }, 600);
+            });
+        });
+
+        // Открытие корзины
+        cartButton.addEventListener('click', function() {
+            updateCartContent();
+            cartModal.style.display = 'block';
+        });
+
+        // Закрытие модальных окон
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                cartModal.style.display = 'none';
+                orderModal.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target == cartModal) {
+                cartModal.style.display = 'none';
+            }
+            if (event.target == orderModal) {
+                orderModal.style.display = 'none';
+            }
+        });
+
+        // Обработка оформления заказа
+        orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Собираем данные формы
+            const formData = new FormData(this);
+            const orderData = {
+                customer: {
+                    name: formData.get('name'),
+                    phone: formData.get('phone'),
+                    email: formData.get('email'),
+                    delivery: formData.get('delivery'),
+                    address: formData.get('address'),
+                    message: formData.get('message')
+                },
+                items: cart,
+                total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+                date: new Date().toISOString()
+            };
+
+            // Здесь должна быть отправка данных на сервер
+            // Например, с помощью fetch или XMLHttpRequest
+
+            // В данном примере просто показываем сообщение
+            alert(`Спасибо за заказ, ${orderData.customer.name}!\n\nМы свяжемся с вами в ближайшее время для подтверждения.`);
+
+            // Очищаем корзину
+            cart = [];
+            saveCart();
+            updateCartCount();
+
+            // Закрываем модальное окно
+            orderModal.style.display = 'none';
+
+            // Очищаем форму
+            this.reset();
+        });
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCart();
+        });
+    </script>
+     <script>
+        // Защита от XSS
+        function escapeHtml(unsafe) {
+            return unsafe.toString()
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        // CSRF-токен
+        let csrfToken = generateCsrfToken();
+
+        function generateCsrfToken() {
+            const array = new Uint32Array(10);
+            window.crypto.getRandomValues(array);
+            return array.join('');
+        }
+
+        // Защищенная корзина
+        class SecureCart {
+            constructor() {
+                this.cart = [];
+                this.loadCart();
+            }
+
+            loadCart() {
+                try {
+                    const savedCart = localStorage.getItem('secureCart');
+                    if (savedCart) {
+                        // Валидация данных корзины
+                        const parsed = JSON.parse(savedCart);
+                        if (Array.isArray(parsed) {
+                            this.cart = parsed.filter(item =>
+                                item.id &&
+                                item.name &&
+                                typeof item.price === 'number' &&
+                                typeof item.quantity === 'number' &&
+                                item.price > 0 &&
+                                item.quantity > 0
+                            );
+                        }
+                    }
+                } catch (e) {
+                    console.error('Ошибка загрузки корзины:', e);
+                    this.cart = [];
+                }
+            }
+
+            saveCart() {
+                try {
+                    localStorage.setItem('secureCart', JSON.stringify(this.cart));
+                } catch (e) {
+                    console.error('Ошибка сохранения корзины:', e);
+                }
+            }
+
+            addItem(item) {
+                // Валидация входных данных
+                if (!item || !item.id || !item.name || typeof item.price !== 'number' || item.price <= 0) {
+                    throw new Error('Некорректные данные товара');
+                }
+
+                const existingItem = this.cart.find(i => i.id === item.id);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    this.cart.push({
+                        id: escapeHtml(item.id),
+                        name: escapeHtml(item.name),
+                        price: Number(item.price),
+                        image: item.image.startsWith('https://') ? item.image : '',
+                        quantity: 1
+                    });
+                }
+                this.saveCart();
+            }
+
+            removeItem(index) {
+                if (index >= 0 && index < this.cart.length) {
+                    this.cart.splice(index, 1);
+                    this.saveCart();
+                }
+            }
+
+            updateQuantity(index, quantity) {
+                if (index >= 0 && index < this.cart.length) {
+                    const qty = Number(quantity);
+                    if (qty > 0 && qty < 1000) { // разумные ограничения
+                        this.cart[index].quantity = qty;
+                        this.saveCart();
+                    }
+                }
+            }
+
+            getTotalItems() {
+                return this.cart.reduce((sum, item) => sum + item.quantity, 0);
+            }
+
+            getTotalPrice() {
+                return this.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            }
+
+            clear() {
+                this.cart = [];
+                this.saveCart();
+            }
+        }
+
+        // Инициализация защищенной корзины
+        const secureCart = new SecureCart();
+
+        // Защищенная обработка формы
+        function setupSecureForm() {
+            const orderForm = document.getElementById('orderForm');
+            if (orderForm) {
+                orderForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    // Валидация данных формы
+                    const name = escapeHtml(this.name.value.trim());
+                    const phone = escapeHtml(this.phone.value.trim());
+                    const email = escapeHtml(this.email.value.trim());
+                    const delivery = escapeHtml(this.delivery.value);
+                    const address = escapeHtml(this.address.value.trim());
+                    const message = escapeHtml(this.message.value.trim());
+
+                    if (!name || !phone) {
+                        alert('Пожалуйста, заполните обязательные поля');
+                        return;
+                    }
+
+                    // Проверка телефона
+                    if (!/^[\d\s\-\+\(\)]{10,20}$/.test(phone)) {
+                        alert('Пожалуйста, введите корректный номер телефона');
+                        return;
+                    }
+
+                    // Проверка email (если указан)
+                    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                        alert('Пожалуйста, введите корректный email');
+                        return;
+                    }
+
+                    // Подготовка данных заказа
+                    const orderData = {
+                        customer: { name, phone, email, delivery, address, message },
+                        items: secureCart.cart,
+                        total: secureCart.getTotalPrice(),
+                        date: new Date().toISOString(),
+                        csrfToken
+                    };
+
+                    try {
+                        // В реальном приложении здесь будет fetch-запрос к серверу
+                        // с проверкой CSRF-токена на сервере
+                        console.log('Отправка заказа:', orderData);
+
+                        // Эмуляция успешной отправки
+                        alert(`Спасибо за заказ, ${name}!\n\nМы свяжемся с вами в ближайшее время для подтверждения.`);
+
+                        // Очистка корзины после успешного заказа
+                        secureCart.clear();
+                        updateCartCount();
+                        orderModal.style.display = 'none';
+                        this.reset();
+                    } catch (error) {
+                        console.error('Ошибка отправки заказа:', error);
+                        alert('Произошла ошибка при оформлении заказа. Пожалуйста, попробуйте позже.');
+                    }
+                });
+            }
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            setupSecureForm();
+
+            // Защищенные обработчики для кнопок "В корзину"
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    try {
+                        secureCart.addItem({
+                            id: this.getAttribute('data-id'),
+                            name: this.getAttribute('data-name'),
+                            price: parseInt(this.getAttribute('data-price')),
+                            image: this.getAttribute('data-image')
+                        });
+                        updateCartCount();
+                        animateAddToCart(this);
+                    } catch (error) {
+                        console.error('Ошибка добавления в корзину:', error);
+                    }
+                });
+            });
+        });
+
+        // Остальные вспомогательные функции (анимации, обновление интерфейса)
+        function updateCartCount() {
+            cartCount.textContent = secureCart.getTotalItems();
+        }
+
+    </script>
+
+</body>
+</html>
